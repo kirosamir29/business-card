@@ -15,7 +15,7 @@ class BusinessCard extends StatelessWidget {
         backgroundColor: Color(0xFF2B475E),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             CircleAvatar(
               backgroundColor: Colors.white,
               radius: 112,
@@ -43,61 +43,22 @@ class BusinessCard extends StatelessWidget {
               endIndent: 60,
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-              child: Container(
-                height: 65,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: Icon(
-                        Icons.phone,
-                        size: 32,
-                        color: Color(0xFF2B475E),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 60),
-                      child: Text(
-                        "+20 1555816029",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                  ],
-                ),
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              color: Colors.white,
+              child: ListTile(
+                leading: Icon(Icons.phone, size: 32, color: Color(0xFF2B475E)),
+                title: Text("+20 1555816029", style: TextStyle(fontSize: 17)),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Container(
-                height: 65,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: Icon(
-                        Icons.mail,
-                        size: 32,
-                        color: Color(0xFF2B475E),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 22),
-                      child: Text(
-                        "kirolous.samir.sadik@gmail.com",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                  ],
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              color: Colors.white,
+              child: ListTile(
+                leading: Icon(Icons.mail, size: 32, color: Color(0xFF2B475E)),
+                title: Text(
+                  "kirolous.samir.sadik@gmail.com",
+                  style: TextStyle(fontSize: 17),
                 ),
               ),
             ),
