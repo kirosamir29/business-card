@@ -14,13 +14,14 @@ class BusinessCard extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color(0xFF2B475E),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               backgroundColor: Colors.white,
-              radius: 122,
+              radius: 112,
               child: CircleAvatar(
                 backgroundImage: AssetImage("images/kiro.jpg"),
-                radius: 120,
+                radius: 110,
               ),
             ),
             Text(
@@ -33,10 +34,17 @@ class BusinessCard extends StatelessWidget {
             ),
             Text(
               "ANDROID || FLUTTER DEVELOPER",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: TextStyle(color: Color(0xFF6C8090), fontSize: 16),
+            ),
+            Divider(
+              color: Color(0xFF6C8090),
+              thickness: 1,
+              indent: 60,
+              endIndent: 60,
+              height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
               child: Container(
                 height: 65,
                 decoration: BoxDecoration(
@@ -45,11 +53,21 @@ class BusinessCard extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Spacer(flex: 1),
-                    Icon(Icons.phone, size: 32, color: Color(0xFF2B475E)),
-                    Spacer(flex: 1),
-                    Text("+20 1555816029"),
-                    Spacer(flex: 3),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16),
+                      child: Icon(
+                        Icons.phone,
+                        size: 32,
+                        color: Color(0xFF2B475E),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 60),
+                      child: Text(
+                        "+20 1555816029",
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -64,11 +82,21 @@ class BusinessCard extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Spacer(flex: 2),
-                    Icon(Icons.mail, size: 32, color: Color(0xFF2B475E)),
-                    Spacer(flex: 1),
-                    Text("kirolous.samir.sadik@gmail.com"),
-                    Spacer(flex: 3),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16),
+                      child: Icon(
+                        Icons.mail,
+                        size: 32,
+                        color: Color(0xFF2B475E),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 22),
+                      child: Text(
+                        "kirolous.samir.sadik@gmail.com",
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
                   ],
                 ),
               ),
